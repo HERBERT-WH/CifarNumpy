@@ -73,12 +73,24 @@ python hyperparameter_search.py
 ## 可视化结果
 
 ### 训练历史
+运行以下命令以生成训练历史图表：
+```bash
+python visualize_training.py
+```
 ![训练历史](training_history.png)
 
 ### 混淆矩阵
+运行以下命令以生成混淆矩阵：
+```bash
+python -c "from model import NeuralNetwork; nn = NeuralNetwork(...); nn.plot_confusion_matrix(...)"
+```
 ![混淆矩阵](confusion_matrix.png)
 
 ### 权重分布
+运行以下命令以生成权重分布图：
+```bash
+python -c "from model import NeuralNetwork; nn = NeuralNetwork(...); nn.plot_weights()"
+```
 ![权重分布](weights_distribution.png)
 
 ## 注意事项
